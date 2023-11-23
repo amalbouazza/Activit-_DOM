@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Mon site Web</title>
+  <script src="script.js"></script>
+  <style type="text/css" href="style.css"></style>
+</head>
+<body>
+<FORM name= "F">
+
+<FIELDSET STYLE="background: #FFFFDD ;">
+<LEGEND id="titre" STYLE="background: #FFFF88 ;"><B>Client</B></LEGEND>
+
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="5" WIDTH="100%">
+
+<TR>
+  <TD WIDTH="17%"><B>Civilité</B>
+  <TD WIDTH="45%">
+	<INPUT TYPE=RADIO NAME=civilite VALUE="Mademoiselle">Mademoiselle
+  	<INPUT TYPE=RADIO NAME=civilite VALUE="Madame" >Madame
+	<INPUT TYPE=RADIO NAME=civilite VALUE="Monsieur">Monsieur
+  <TD id="T1" WIDTH="38%">
+  <INPUT TYPE="text" NAME="display" SIZE=15 VALUE ="">
+  </TD>
+<TR>
+  <TD><B>Nom / Prénom</B>
+  <TD>	<INPUT id="C1" TYPE=TEXT NAME=nom SIZE=50 MAXLENGTH=80 onChange="verifiernom()">
+  <TD id="T2"></TD>
+<TR>
+  <TD><B>Adresse</B>
+  <TD>	<TEXTAREA id="C2" NAME=adresse COLS=50 ROWS=2 WRAP=PHYSICAL onChange="verifieradresse()"></TEXTAREA>
+  <TD id="T3"></TD>
+  
+<TR>
+  <TD><B>No postal / Localité</B>
+  <TD>	<INPUT id="C3" TYPE=TEXT NAME=no_postal Size=5 MAXLENGTH=4 onChange="verifierpostal()">
+	<INPUT  id="C4" TYPE=TEXT NAME=localite SIZE=20 MAXLENGTH=80 VALUE="">
+<TD id="T4"></TD>
+<TR>
+  <TD><B>Pays</B>
+  <TD>	<SELECT id="lepays" NAME=pays>
+ 	  <OPTION>Tunisie
+	  <OPTION>Algérie
+	  <OPTION SELECTED>Maroc
+	</SELECT>
+    <B>  Ajouter pays</B>
+	<INPUT id="C5" TYPE=TEXT NAME=monpays SIZE=20 MAXLENGTH=80 VALUE="Libye">
+	<button type="button" onClick="AjouterPays()">Ajouter pays</button>
+<TD></TD>
+
+<TR>
+  <TD><B>Plateforme(s)</B>
+  <TD>	<INPUT TYPE=CHECKBOX NAME=materiel VALUE="Windows" >Windows     
+	<INPUT TYPE=CHECKBOX NAME=materiel VALUE="Mac" >Macintosh     
+	<INPUT TYPE=CHECKBOX NAME=materiel VALUE="Unix">Unix     
+<TD></TD>
+<TR>
+  <TD><B>Applications(s)</B>
+  <TD>	<SELECT NAME=applications   SIZE=5 MULTIPLE>
+	  <OPTION value="Bureautique">Bureautique
+	  <OPTION value="DAO">DAO
+	  <OPTION value="Statistiques">Statistiques
+	  <OPTION value="SGBD">SGBD
+	  <OPTION value="Internet">Internet
+	</SELECT>
+<TD></TD>
+</TABLE>
+
+</FIELDSET>
+
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="10" WIDTH="95%">
+<TR><TH>
+<INPUT TYPE=button VALUE="  Soumettre formulaire  " onclick=AfficherAlert() >  
+<INPUT TYPE=button VALUE="  Vérification formulaire " onclick=VerifierFormulaire()>
+<INPUT TYPE=RESET VALUE=" Effacer ">
+<INPUT type="button" VALUE="  Enregistrer " onclick="Enregistrer()">
+  <INPUT type="button" VALUE="  Recuperer " onclick="Recuperer()">
+
+</TABLE>
+
+</FORM>
+</body>
+</html>
